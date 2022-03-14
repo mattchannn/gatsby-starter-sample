@@ -1,0 +1,161 @@
+:target {
+  // 80px + extra space
+  scroll-margin-top: 5rem;
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-track:hover {
+  // background-color: #f4f4f4;
+  background-color: #fff;
+}
+
+/* scrollbar itself */
+::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 5px solid #fff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a5;
+  // border: 4px solid #f4f4f4;
+}
+
+/* set button(top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size);
+  background: var(--background);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+p {
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  line-height: 1.95rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  color: var(--gray6);
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 2.5px solid #eee;
+}
+
+li {
+  padding: 0.5rem 0;
+}
+
+a {
+  text-decoration: initial;
+  color: var(--text-secondary);
+  position: relative;
+  &:after {
+    content: '';
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+    transform-origin: left;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
+  &:hover {
+    color: var(--text-primary);
+  }
+  &:hover:after {
+    background-color: currentColor;
+    transform: scaleX(1);
+  }
+}
+
+code {
+  color: var(--pink);
+  font-family: var(--font-code);
+  font-size: 0.95em;
+  font-weight: 400;
+  word-break: break-word;
+}
+
+pre {
+  font-family: var(--font-code);
+  font-size: 0.95em;
+  font-weight: 400;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: #e3edf3 1px solid;
+  width: 100%;
+  padding: 7px;
+  white-space: pre;
+  overflow: auto;
+  background: var(--white);
+  border-radius: 0;
+  line-height: 1.6;
+  color: var(--black);
+  code {
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    word-break: break-word;
+    background-color: inherit;
+  }
+}
+
+// Globally available styles
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+a.anchor {
+  &::after {
+    display: none;
+  }
+}

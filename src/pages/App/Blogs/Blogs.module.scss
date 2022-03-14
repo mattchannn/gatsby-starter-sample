@@ -1,0 +1,17 @@
+.master-container {
+  max-width: 50rem;
+  margin: 4rem auto;
+}
+
+.list-container {
+  max-width: 30rem;
+  margin: 0 auto;
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+  }
+}
