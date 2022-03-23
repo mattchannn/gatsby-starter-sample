@@ -16,7 +16,6 @@ export const query = graphql`
   query {
     allMdx(
       sort: { fields: frontmatter___date, order: DESC }
-      filter: { fields: { source: { eq: "blogs" } } }
     ) {
       nodes {
         timeToRead
@@ -27,9 +26,6 @@ export const query = graphql`
           description
         }
         id
-        fields {
-          source
-        }
         body
       }
     }
